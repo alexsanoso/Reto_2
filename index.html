@@ -10,80 +10,92 @@
     <link rel = "stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" language="javascript" src="js/ajax.js"></script>
-
+        
 </head>
 <body>
-    <h1 class="title">Alquiler de Maquinaria</h1>
-    <div class="container">
+    <h1 class="title">VENTA DE MÁQUINARIA</h1>
+    <!-------------------------------------------Tabla para máquinaria------------------------------------------->
+    <div class="container-maquina">
         <table class="table" id="tabla-maquinaria">
-            <th>ID</th>
-            <th>Marca</th>
-            <th>Modelo</th>
-            <th>Category ID</th>
             <th>Nombre</th>
+            <th>Marca</th>
+            <th>Año</th>
+            <th>Descripción</th>
+            <th>Categoria</th>
+            <th>Mensaje</th>
+            <th>Reservación</th>
+            
         </table>
         <br>
-        <button class="button btnAcT" id="act-tabla-maquinaria">Actualizar Tabla de Maquinaria</button>
-        <input type="number" class='form-control' id="escribir-id-cuadros-maquinaria" placeholder="Escribe ID">
-        <br>
+        <button class="button btnAcT" id="act-tabla-maquinaria">Actualizar Tabla de Maquinaria</button><br>
+        <br><div class="casilla-texto">
+        <input type="number" class='form-control' id="escribir-id-cuadros-maquinaria" placeholder="Escribe la ID">
+        <br></div>
         <button class="button btnB" id="buscar-id-maquinaria">Buscar ID</button>
         <button class="button btnB" id="borrar-maquinaria">Borrar</button>
-        <h5>Agregar Maquinaria</h5>
+        <h5 class="titulos">Agregar Maquinaria</h5>
         <form>
-            <div>
-                <label for="ID">ID</label>
-                <input type="number" class='form-control' id="escribir-id-maquinaria" placeholder="Escribe ID">
-            </div>
-            <div>
-                <label for="Brand">Marca</label>
-                <input type="text" class='form-control' id="escribir-marca-maquinaria" placeholder="Escribe marca">
-            </div>
-            <div>
-                <label for="Model">Modelo</label>
-                <input type="number" class='form-control' id="escribir-modelo-maquinaria" placeholder="Escribe modelo">
-            </div>
-            <div>
-                <label for="Category_ID">CategoriaID</label>
-                <input type="number" class='form-control' id="escribir-category-maquinaria" placeholder="Escribe categoria ID">
-            </div>
-            <div>
-                <label for="Name">Nombre</label>
+            
+            <div class="casilla-texto">
+                <label for="Name"><b>Nombre</b></label>
                 <input type="text" class='form-control' id="escribir-nombre-maquinaria" placeholder="Escribe nombre">
             </div>
+            <div class="casilla-texto">
+                <label for="Brand"><b>Marca</b></label>
+                <input type="text" class='form-control' id="escribir-marca-maquinaria" placeholder="Escribe marca">
+            </div>
+            <div class="casilla-texto">
+                <label for="Año"><b>año</b></label>
+                <input type="number" class='form-control' id="escribir-año-maquinaria" placeholder="Escribe año">
+            </div>
+            <div class="casilla-texto">
+                <label for="Descripción"><b>Descripción</b></label>
+                <input type="text" class='form-control' id="escribir-descripcion-maquinaria" placeholder="Escribe descripción">
+            </div>
+            <div class="casilla-texto" >
+                <label for="Category"><b>Categoria</b></label>
+                <input type="number" class='form-control' id="escribir-category-maquinaria" placeholder="Escribe categoria ID">
+            </div>
+            
         </form>
         <br>
         <button class="button btnD" id="agregar-maquinaria-boton" >Agregar Maquinaria</button>
         <button class="button btnD" id="actualizar-maquinaria-boton">Actualizar Maquinaria</button>       
     </div>
-    <div class="container">
+    <!-------------------------------------------Tabla para cliente------------------------------------------->
+    <div class="container-clientes">
         <table class="table" id="tabla-cliente">
             <th>ID</th>
             <th>Nombre</th>
-            <th>Email</th>
+            <th>Correo</th>
             <th>Edad</th>
+            <th>Mensaje</th>
+            <th>Reservación</th>
         </table>
         <br>
         <button class="button btnAcT" id="actualizar-tablacliente-boton">Actualizar Tabla de Cliente</button>
-        <input type="number" class='form-control' id="escribir-id-cuadros-cliente" placeholder="Escribe ID" >
-        <br>
-        <button class="button btnB" id="buscarid-cliente">Buscar ID</button>
+        <br><div class="casilla-texto">
+        <input type="number" class='form-control' id="escribir-id-cuadros-cliente" placeholder="Escribe la ID" >
+        <br></div>
+        <button class="button btnB" id="buscar-id-cliente">Buscar ID</button>
         <button class="button btnB" id="borrar-cliente">Borrar</button>
-        <h5>Agregar Cliente</h5>
+        <h5 class="titulos">Agregar Cliente</h5>
         <form>
-            <div>
-                <label for="ID">ID</label>
-                <input type="number" class='form-control' id="escribir-id-cliente" placeholder="Escribe ID">
-            </div>
-            <div>
-                <label for="Name">Nombre</label>
+            
+            <div class="casilla-texto">
+                <label for="Name"><b>Nombre</b></label>
                 <input type="text" class='form-control' id="escribir-nombre-cliente" placeholder="Escribe nombre">
             </div>
-            <div>
-                <label for="Email">Email</label>
-                <input type="text" class='form-control' id="escribir-email-cliente" placeholder="Escribe email">
+            <div class="casilla-texto">
+                <label for="Correo"><b>Correo</b></label>
+                <input type="text" class='form-control' id="escribir-correo-cliente" placeholder="Escribe su correo">
             </div>
-            <div>
-                <label for="Age">Edad</label>
+            <div class="casilla-texto">
+                <label for="Contraseña"><b>Contraseña</b></label>
+                <input type="text" class='form-control' id="escribir-contraseña-cliente" placeholder="Escribe una contraseña">
+            </div>
+            <div class="casilla-texto">
+                <label for="Edad"><b>Edad</b></label>
                 <input type="number" class='form-control' id="escribir-edad-cliente" placeholder="Escribe edad">
             </div>
         </form>
@@ -91,32 +103,108 @@
         <button class="button btnD" id="agregar-cliente-boton">Agregar Cliente</button>
         <button class="button btnD" id="actualizar-cliente-boton">Actualizar Cliente</button>    
     </div>
-    <div class="container">
+    <!-------------------------------------------Tabla para mensaje------------------------------------------->
+    <div class="container-mensaje">
         <table class="table" id="tabla-mensaje">
-            <th>ID</th>
             <th>Mensaje</th>
+            <th>Máquinaria</th>
+            <th>Cliente</th>
         </table>
         <br>
-        <button class="button btnAcT" id="actualizar-tabla-mensaje">Actualizar Tabla de Mensaje</button>
-        <input type="number" class='form-control' id="escribir-id-cuadros-mensaje" placeholder="Escribe ID">
-        <br>
-        <button class="button btnB" id="buscarid-mensaje-boton">Buscar ID</button>
+        <button class="button btnAcT" id="actualizar-tabla-mensaje">Actualizar Tabla Mensaje</button>
+        <br><div class="casilla-texto">
+        <input type="number" class='form-control' id="escribir-id-cuadros-mensaje" placeholder="Escribe la ID">
+        <br></div>
+        <button class="button btnB" id="buscar-id-mensaje">Buscar ID</button>
         <button class="button btnB" id="borrar-mensaje-boton">Borrar</button>
-        <h5>Agregar Mensaje</h5>
+        <h5 class="titulos">Agregar Mensaje</h5>
         <form>
-            <div>
-                <label for="ID">ID</label>
-                <input type="number" class='form-control' id="escribir-id-mensaje"  placeholder="Escribe ID">
+            <div class="casilla-texto">
+                <label for="cliente"><b>Mensaje</b></label>
+                <input type="text" class='form-control' id="escribir-cuadro-mensaje"  placeholder="Escribe un mensaje">
             </div>
-            <div>
-                <label for="Message">Mensaje</label>
-                <input type="text" class='form-control' id="escribir-mensaje-mensaje" placeholder="Escribe mensaje">
+            <div class="casilla-texto">
+                <label for="Cliente"><b>Id Cliente</b></label>
+                <input type="number" class='form-control' id="escribir-id-cliente"  placeholder="Escribe ID Cliente">
+            </div>
+            <div class="casilla-texto">
+                <label for="Maquinaria"><b>Id Máquinaria</b></label>
+                <input type="number" class='form-control' id="escribir-id-maquinaria" placeholder="Escribe ID máquinaria">
             </div>
         </form>
         <br>
         <button class="button btnD" id="agregar-mensaje-boton">Agregar Mensaje</button>
         <button class="button btnD" id="actualizar-mensaje-boton">Actualizar Mensaje</button>    
-
     </div>
+
+    <!-------------------------------------------Tabla para categoria------------------------------------------->
+    <div class="container-categoria">
+        <table class="table" id="tabla-categoria">
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Máquinaria</th>
+        </table>
+        <br>
+        <button class="button btnAcT" id="actualizar-tabla-mensaje">Actualizar Tabla Categoria</button>
+        <br><div class="casilla-texto">
+        <input type="number" class='form-control' id="escribir-id-cuadros-categoria" placeholder="Escribe la ID">
+        <br></div>
+        <button class="button btnB" id="buscar-id-categoria">Buscar ID</button>
+        <button class="button btnB" id="borrar-categoria-boton">Borrar</button>
+        <h5 class="titulos">AGREGAR CATEGORIA</h5>
+        <form>
+            <div class="casilla-texto">
+                <label for="name"><b>Nombre</b></label>
+                <input type="text" class='form-control' id="escribir-nombre-categoria" placeholder="Escribe nombre">
+            </div>
+            <div class="casilla-texto">
+                <label for="descripción"><b>Descripción</b></label>
+                <input type="text" class='form-control' id="escribir-descripcion-categoria" placeholder="Escribe descripción">
+            </div>
+        </form>
+        <br>
+        <button class="button btnD" id="agregar-categoria-boton">Agregar Categoria</button>
+        <button class="button btnD" id="actualizar-categoria-boton">Actualizar Categoria</button>
+    </div>
+    <!-------------------------------------------Tabla para reservacion------------------------------------------->
+    <div class="container-reservacion">
+        <table class="table" id="tabla-reservacion">
+            <th>ID Reservación</th>
+            <th>Fecha inicio</th>
+            <th>Fecha devolución</th>
+            <th>Cliente</th>
+            <th>Máquinaria</th>
+        </table>
+        <br>
+        <button class="button btnAcT" id="actualizar-tabla-reservacion">Actualizar Tabla Reservación</button>
+        <br><div class="casilla-texto">
+        <input type="number" class='form-control' id="escribir-id-cuadros-reservacion" placeholder="Escribe la ID">
+        <br></div>
+        <button class="button btnB" id="buscar-id-reservacion">Buscar ID</button>
+        <button class="button btnB" id="borrar-reservacion-boton">Borrar</button>
+        <h5 class="titulos">AGREGAR RESERVACION</h5>
+        <form>
+            <div class="casilla-texto">
+                <label for="fecha-inicio"><b>Fecha de Inicio</b></label>
+                <input type="date" class='form-control' id="escribir-fechaInicio-reservacion" placeholder="Escribe fecha inicio">
+            </div>
+            <div class="casilla-texto">
+                <label for="fecha-devolucion"><b>Fecha de devolución</b></label>
+                <input type="date" class='form-control' id="escribir-fechaDevolucion-reservacion" placeholder="Escribe fecha devolucion">
+            </div>
+            <div class="casilla-texto">
+                <label for="idCliente"><b>Id Cliente</b></label>
+                <input type="number" class='form-control' id="escribir-idCliente-reservacion" placeholder="Escribe Id Cliente">
+            </div>
+            <div class="casilla-texto">
+                <label for="idMaquinaria"><b>Id Máquinaria</b></label>
+                <input type="number" class='form-control' id="escribir-idMaquinaria-reservacion" placeholder="Escribe Id Máquinaria">
+            </div>
+        </form>
+        <br>
+        <button class="button btnD" id="agregar-reservacion-boton">Agregar Reservación</button>
+        <button class="button btnD" id="actualizar-reservacion-boton">Actualizar Reservación</button>
+    </div>
+
 </body>
 </html>

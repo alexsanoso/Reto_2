@@ -183,7 +183,7 @@ $(document).ready(function () {
         } );   
     })
 
-    $("#Boton-Mensaje").click(function () {
+    $("#actualizar-tabla-mensaje").click(function () {
         var urlServicio = "https://g2f9528d5904287-dbreto1.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message";
         $("#tabla.mensaje tbody").empty();
         $.ajax({
@@ -291,28 +291,30 @@ $("#borrar-mensaje-boton").click(function () {
                 var marca = "";
                 var modelo = 0;
                 var categoryId = 0;
+                var nombre = 0;
                 var estructuraFila = "";
                 resultadoConsulta = result.items;
 
-                $("#tabla-carros tbody").empty();
+                $("#tabla-maquinaria tbody").empty();
 
-                salidaFila = "<tr><th>ID Carro</th><th>Marca</th><th>Modelo</th><th>Category_ID</th></tr>";
-                $("#tabla-carros tbody").append(salidaFila);
+                salidaFila = "<tr><th>ID Maquinaria</th><th>Marca</th><th>Modelo</th><th>Category_ID</th><th>Nombre</th></tr>";
+                $("#tabla-maquinaria tbody").append(salidaFila);
 
 
                 for (i = 0;  i < resultadoConsulta.length;  i++){
                     id = result.items[i]["id"];
                     marca = result.items[i]["brand"];
                     modelo = result.items[i]["model"];
-                    categoryId = result.items[i]["category_id"]
+                    categoryId = result.items[i]["category_id"];
+                    nombre = result.items[i]["name"];
                     estructuraFila = "<tr><td>" + id + "</td><td>" +
-                    marca + "</td><td>" + modelo + "</td><td>" + categoryId + "</td></tr>";
+                    marca + "</td><td>" + modelo + "</td><td>" + categoryId + "</td><td>" + name + "</td></tr>";
                     
-                    $("#tabla-carros tbody").append(estructuraFila);
-                    $("#tabla-carros").addClass("estiloRelleno" );
+                    $("#tabla-maquinaria tbody").append(estructuraFila);
+                    $("#tabla-maquinaria").addClass("estiloRelleno" );
                 }
                 
-                $("#tabla-carros tbody").show();
+                $("#tabla-maquinaria tbody").show();
 
             }});
 
