@@ -1,4 +1,4 @@
-$(document).ready(function () {
+/**$(document).ready(function () {
     jQuery.support.cors = true;
     $("#act-tabla-maquinaria").click(function () {
         var urlServicio = "https://g2f9528d5904287-dbreto1.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/machine/machine";
@@ -418,4 +418,4 @@ $("#borrar-mensaje-boton").click(function () {
             }});
     });
     //Fin del selector  del boton de busqueda
-})
+})*/

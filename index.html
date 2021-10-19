@@ -9,23 +9,61 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel = "stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" language="javascript" src="js/ajax.js"></script>
+    <!--<script type="text/javascript" language="javascript" src="js/ajax.js"></script>-->
+    <script type="text/javascript" language="javascript" src="js/machine.js"></script>
+    <script type="text/javascript" language="javascript" src="js/client.js"></script>
+    <script type="text/javascript" language="javascript" src="js/category.js"></script>
+    <script type="text/javascript" language="javascript" src="js/message.js"></script>
+    <script type="text/javascript" language="javascript" src="js/reservation.js"></script>
         
 </head>
 <body>
     <h1 class="title">VENTA DE MÁQUINARIA</h1>
+
+    <!-------------------------------------------Tabla para categoria------------------------------------------->
+    <div class="container-categoria">
+        <table class="table" id="tabla-categoria">
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Maquinaria</th>
+        </table>
+        <br>
+        <button class="button btnAcT" id="actualizar-tabla-categoria">Actualizar Tabla Categoria</button>
+        <br><div class="casilla-texto">
+        <input type="number" class='form-control' id="escribir-id-cuadros-categoria" placeholder="Escribe la ID">
+        <br></div>
+        <button class="button btnB" id="buscar-id-categoria">Buscar ID</button>
+        <button class="button btnB" id="borrar-categoria-boton">Borrar</button>
+        <h5 class="titulos">AGREGAR CATEGORIA</h5>
+        <form>
+            <div class="casilla-texto">
+                <label for="name"><b>Nombre</b></label>
+                <input type="text" class='form-control' id="escribir-nombre-categoria" placeholder="Escribe nombre" required>
+            </div>
+            <div class="casilla-texto">
+                <label for="descripción"><b>Descripción</b></label>
+                <input type="text" class='form-control' id="escribir-descripcion-categoria" placeholder="Escribe descripción" required>
+            </div>
+            <br>
+        </form>
+        <button class="button btnD" id="agregar-categoria-boton">Agregar Categoria</button>
+        <button class="button btnD" id="actualizar-categoria-boton">Actualizar Categoria</button>
+    </div>
     <!-------------------------------------------Tabla para máquinaria------------------------------------------->
     <div class="container-maquina">
-        <table class="table" id="tabla-maquinaria">
-            <th>Nombre</th>
-            <th>Marca</th>
-            <th>Año</th>
-            <th>Descripción</th>
-            <th>Categoria</th>
-            <th>Mensaje</th>
-            <th>Reservación</th>
-            
-        </table>
+        <div class="table-responsive">
+            <table class="table" id="tabla-maquinaria">
+                <th>Nombre</th>
+                <th>Marca</th>
+                <th>Año</th>
+                <th>Descripción</th>
+                <th>Categoria</th>
+                <th>Mensajes</th>
+                <th>Reservaciónes</th>
+                <td>ACCION</td>
+                
+            </table>
+        </div>
         <br>
         <button class="button btnAcT" id="act-tabla-maquinaria">Actualizar Tabla de Maquinaria</button><br>
         <br><div class="casilla-texto">
@@ -64,14 +102,16 @@
     </div>
     <!-------------------------------------------Tabla para cliente------------------------------------------->
     <div class="container-clientes">
-        <table class="table" id="tabla-cliente">
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Correo</th>
-            <th>Edad</th>
-            <th>Mensaje</th>
-            <th>Reservación</th>
-        </table>
+        <div class="table-responsive">
+            <table class="table" id="tabla-cliente">
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Edad</th>
+                <th>Mensajes</th>
+                <th>Reservaciones</th>
+            </table>
+        </div>  
         <br>
         <button class="button btnAcT" id="actualizar-tablacliente-boton">Actualizar Tabla de Cliente</button>
         <br><div class="casilla-texto">
@@ -137,43 +177,18 @@
         <button class="button btnD" id="actualizar-mensaje-boton">Actualizar Mensaje</button>    
     </div>
 
-    <!-------------------------------------------Tabla para categoria------------------------------------------->
-    <div class="container-categoria">
-        <table class="table" id="tabla-categoria">
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Máquinaria</th>
-        </table>
-        <br>
-        <button class="button btnAcT" id="actualizar-tabla-mensaje">Actualizar Tabla Categoria</button>
-        <br><div class="casilla-texto">
-        <input type="number" class='form-control' id="escribir-id-cuadros-categoria" placeholder="Escribe la ID">
-        <br></div>
-        <button class="button btnB" id="buscar-id-categoria">Buscar ID</button>
-        <button class="button btnB" id="borrar-categoria-boton">Borrar</button>
-        <h5 class="titulos">AGREGAR CATEGORIA</h5>
-        <form>
-            <div class="casilla-texto">
-                <label for="name"><b>Nombre</b></label>
-                <input type="text" class='form-control' id="escribir-nombre-categoria" placeholder="Escribe nombre">
-            </div>
-            <div class="casilla-texto">
-                <label for="descripción"><b>Descripción</b></label>
-                <input type="text" class='form-control' id="escribir-descripcion-categoria" placeholder="Escribe descripción">
-            </div>
-        </form>
-        <br>
-        <button class="button btnD" id="agregar-categoria-boton">Agregar Categoria</button>
-        <button class="button btnD" id="actualizar-categoria-boton">Actualizar Categoria</button>
-    </div>
+    
     <!-------------------------------------------Tabla para reservacion------------------------------------------->
     <div class="container-reservacion">
         <table class="table" id="tabla-reservacion">
             <th>ID Reservación</th>
             <th>Fecha inicio</th>
             <th>Fecha devolución</th>
+            <th>Estado</th>
+            <th>Maquinaria</th>
             <th>Cliente</th>
-            <th>Máquinaria</th>
+            <th>Calificación</th>
+            
         </table>
         <br>
         <button class="button btnAcT" id="actualizar-tabla-reservacion">Actualizar Tabla Reservación</button>
